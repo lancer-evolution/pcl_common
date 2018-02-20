@@ -1,0 +1,29 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  filter_field_name: x
+  filter_limit_max: 50.0
+  filter_limit_min: 0.0
+  filter_limit_negative: false
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      filter_field_name: x
+      filter_limit_max: 50.0
+      filter_limit_min: 0.0
+      filter_limit_negative: false
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      input_frame: ''
+      keep_organized: false
+      name: Default
+      output_frame: ''
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      state: true
+      type: ''
+    state: []
+  input_frame: ''
+  keep_organized: false
+  output_frame: ''
+state: []

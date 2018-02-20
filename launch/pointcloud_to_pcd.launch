@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="pcl_ros" type="pointcloud_to_pcd" name="pointcloud_to_pcd" output="screen" respawn="true">
+	<remap from="/input" to="/cloud_pcd_xyz"/>
+	<!-- <remap from="prefix" to="$(find pcl_common)/"/> -->
+  </node>
+</launch>
