@@ -28,7 +28,7 @@ rqtのDynamic Reconfigureを立ち上げて，`config`フォルダ内のpcl_pass
 roslaunch pcl_common pointcloud_to_pcd.launch
 ```
 
-** 設定**
+**設定**
 
 PointCloud2トピック
 ```xml
@@ -42,7 +42,7 @@ PointCloud2トピック
 roslaunch pcl_common ndt_mapping.launch
 ```
 
-** 設定**  
+**設定**  
 ```xml
 <param name="max_iter" type="double" value="30" />
 <param name="ndt_res" type="double" value="1.0" />
