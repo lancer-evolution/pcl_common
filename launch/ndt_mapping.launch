@@ -6,12 +6,12 @@
 	  <param name="trans_eps" type="double" value="0.01" />
 	  <param name="leaf_size" type="double" value="0.5" />
 	  <param name="map_leaf_size" type="double" value="0.02" />
-	  <param name="min_scan_range" type="double" value="3.0" />
+	  <param name="min_scan_range" type="double" value="0.2" />
 	  <param name="min_add_scan_shift" type="double" value="0.5" />
 	  <param name="base_link_" type="string" value="map" />
 	  <param name="current_frame_" type="string" value="velodyne" />
-	  <!-- <param name="sub_name" type="string" value="/hokuyo3d/hokuyo_cloud2" /> -->
-	  <param name="sub_name" type="string" value="/velodyne_points" />
+	  <param name="sub_name" type="string" value="/hokuyo3d/hokuyo_cloud2" />
+	  <!-- <param name="sub_name" type="string" value="/velodyne_points" /> -->
     </node>
 
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find pcl_common)/rviz_config.rviz" />

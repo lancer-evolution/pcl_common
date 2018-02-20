@@ -62,6 +62,21 @@ roslaunch pcl_common ndt_mapping.launch
 
 任意の最小・最大の点からBoundingBoxを表示する
 
+## pointcloud_to_pcd
 
+`pointcloud2`から`pcd`ファイルに保存する
+
+```bash
+roslaunch pcl_common pointcloud_to_pcd.launch
+```
+
+**設定**
+
+```xml
+<remap from="input" to="orb/point_cloud2" />
+<param name="fixed_frame" type="string" value="velodyne" />
+```
+
+`fixed_frame`を設定することで，その座標から見た点群で保存できる．
 
 

@@ -1,6 +1,11 @@
 <launch>
-  <node pkg="pcl_ros" type="pointcloud_to_pcd" name="pointcloud_to_pcd" output="screen" respawn="true">
-	<remap from="/input" to="/cloud_pcd_xyz"/>
-	<!-- <remap from="prefix" to="$(find pcl_common)/"/> -->
-  </node>
+  <param name="binary" type="bool" value="false" />
+	<node name="pointcloud_to_pcd" pkg="pcl_common" type="pointcloud_to_pcd" output="screen" >
+	  <remap from="input" to="orb/point_cloud2" />
+	  <!-- fix frame -->
+	  <param name="fixed_frame" type="string" value="velodyne" />
+	  <!-- <param name="binary" type="bool" value="true" /> -->
+	  <!-- <param name="compressed" type="bool" value="true" /> -->
+	  <param name="prefix" type="string" value="" />
+	</node>
 </launch>
