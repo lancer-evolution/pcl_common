@@ -144,7 +144,8 @@ class PointCloudToPCD
                            << prefix_);
         }
 
-      priv_nh.getParam ("fixed_frame", fixed_frame_);
+      //priv_nh.getParam ("fixed_frame", fixed_frame_);
+	  priv_nh.param ("fixed_frame", fixed_frame_, string("base_link"));
       priv_nh.getParam ("binary", binary_);
       priv_nh.getParam ("compressed", compressed_);
       if(binary_)
@@ -168,6 +169,8 @@ class PointCloudToPCD
       sub_ = nh_.subscribe (cloud_topic_, 1,  &PointCloudToPCD::cloud_cb, this);
       ROS_INFO ("Listening for incoming data on topic %s",
                 nh_.resolveName (cloud_topic_).c_str ());
+	  ROS_INFO ("Fixed frame is %s",
+                nh_.resolveName (fixed_frame_).c_str ());
     }
 };
 

@@ -1,11 +1,14 @@
 <launch>
   <param name="binary" type="bool" value="false" />
-	<node name="pointcloud_to_pcd" pkg="pcl_common" type="pointcloud_to_pcd" output="screen" >
-	  <remap from="input" to="orb/point_cloud2" />
-	  <!-- fix frame -->
-	  <param name="fixed_frame" type="string" value="velodyne" />
-	  <!-- <param name="binary" type="bool" value="true" /> -->
-	  <!-- <param name="compressed" type="bool" value="true" /> -->
-	  <param name="prefix" type="string" value="" />
-	</node>
+  <arg name="input" default="orb/point_cloud2" />
+  <arg name="fixed_frame" default="velodyne" />
+  
+  <node name="pointcloud_to_pcd" pkg="pcl_common" type="pointcloud_to_pcd" output="screen" >
+	<remap from="input" to="$(arg input)" />
+	<!-- fix frame -->
+	<param name="fixed_frame" type="string" value="$(arg fixed_frame)" />
+	<!-- <param name="binary" type="bool" value="true" /> -->
+	<!-- <param name="compressed" type="bool" value="true" /> -->
+	<param name="prefix" type="string" value="" />
+  </node>
 </launch>
